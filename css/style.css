@@ -38,6 +38,7 @@ main button{
     font-weight: bold;
     background-color: rgb(220, 211, 211);
     margin-right: 50px;
+    text-decoration: none;
 }
 
 main button:hover{

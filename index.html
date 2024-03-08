@@ -13,25 +13,29 @@
     </header>
     <main>
         <div class="selectOption">
-            <label for="algoSelect">Select A Sorting Algorithm: </label>
-            <select id="algoSelect">
-                <option value="" disabled selected>Select</option>
-                <option value="bubbleSort">Bubble Sort</option>
-                <option value="selectionSort">Select Sort</option>
-                <option value="insertionSort">Insertion Sort</option>
-                <option value="mergeSort">Merge Sort</option>
-                <option value="quickSort">Quick Sort</option>
-                <option value="heapSort">Heap Sort</option>
-                <option value="shellSort">shell Sort</option>
-                <option value="cocktailShakerSort">cocktailShaker Sort</option>
-            </select>
+            <div class="optionContainer">
+                <label for="algoSelect">Select A Sorting Algorithm: </label>
+                <select id="algoSelect">
+                    <option value="" disabled selected>Select</option>
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Select Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                    <option value="mergeSort">Merge Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                    <option value="heapSort">Heap Sort</option>
+                    <option value="shellSort">shell Sort</option>
+                    <option value="cocktailShakerSort">cocktailShaker Sort</option>
+                </select>
+            </div>
             <div class="speed">
                 <label for="animationSpeed">Animation Speed: </label>
                 <input type="range" id="animationSpeed" name="animationSpeed" min="1" max="100" value="50" step="1">
             </div>
-            <button id="randomize">Randomize</button>
-            <button id="startSort">Begin</button>
-            <button id="stop">Stop</button>
+            <div class="buttonContainer">
+                <button id="randomize">Randomize</button>
+                <button id="startSort">Begin</button>
+                <button id="stop">Stop</button>
+            </div>
         </div>
         <div class="displaySort">
             <!-- Display Visualization here-->

@@ -1,154 +1,170 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Times New Roman', Times, sans-serif;
-    color: white;
-    background-color: rgb(43, 0, 83)
-}
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #3d0f61 0%, #2b0053 100%);
+  }
 
-header h1{
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4f4276;
+  }
+  
+  header h1 {
+    font-size: 2.8rem;
+    font-weight: 600;
+  }
+  
+
+  main {
+    width: 100%;
+    min-height: 60vh;
+    padding: 20px 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background-color: rgb(71, 60, 74);
-    font-size: 54px;
-}
-main {
-    width: 100vw;
-    height: 55vh;
-    background-color: rgb(43, 0, 83);
-    padding-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-}
-
-.selectOption{
+    align-items: center;
+  }
+  
+  /* Container for the top control panel */
+  .selectOption {
     display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
     align-items: center;
     justify-content: center;
-}
+    margin-bottom: 20px;
+  }
+  
+  .optionContainer,
+  .speed,
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
 
-main button{
-    color: black;
-    width: 100px;
-    font-weight: bold;
-    background-color: rgb(220, 211, 211);
-    margin-right: 50px;
-    text-decoration: none;
-}
+  #algoSelect {
+    width: 180px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    outline: none;
+    font-size: 0.9rem;
+  }
+  
 
-main button:hover{
-    background-color: rgb(89, 89, 89);
+  #animationSpeed {
     cursor: pointer;
-}
-
-main button:active{
-    background-color: rgb(0, 252, 21);
+  }
+  
+  /* Buttons */
+  .buttonContainer button {
+    color: #333;
+    background-color: #f2f2f2;
+    border: none;
+    padding: 8px 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .buttonContainer button:hover {
+    background-color: #cfcfcf;
     cursor: pointer;
-}
+  }
+  
+  .buttonContainer button:active {
+    background-color: #00fc15; /* bright green on click */
+    cursor: pointer;
+  }
+  
 
-#algoSelect , option{
-    margin-left: 10px;
-    color: black;
-    margin-right: 50px; 
-}
-
-.selectOption select , option{
-    width: 200px;
-    background-color: white;
-}
-
-.speed{
-    margin-right: 50px;
-}
-
-.displaySort{
-    border: solid 1px;
-    width: 75vw;
-    height: 90vh;
-    margin: 20px;
-    background-color: rgb(217, 206, 206);
+  .displaySort {
+    border-radius: 8px;
+    width: 80vw;
+    height: 60vh;
+    background-color: #e4dede;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-end;
     overflow: hidden;
-}
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
 
-.bar{
+  .bar {
     margin: 0 1px; 
-    transition: all 0.3s ease-out; 
-}
+    background-color: #4CAF50; /* default bar color */
+    transition: all 0.3s ease-out;
+  }
+  
 
+  .bar.compare {
+    background-color: #ff1e56 !important; 
+  }
+  
 
-footer{
-    width: 100vw;
-    height: 35vh;
+  .bar.sorted {
+    background-color: #34ae0b !important;
+  }
+  
+  footer {
+    width: 100%;
+    min-height: 20vh;
+    background-color: #4f4276;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     flex-direction: column;
-}
-
-.algoName{
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.algoDesc{
-    font-size: 17px;
-    margin: 0 100px;
-}
-
-@media screen and (max-width:428px) {
-    header h1{
-        font-size: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .algoName,
+  .algoDesc {
+    margin: 10px;
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .algoName p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .algoDesc p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
     }
-    .selectOption{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+  
+    .selectOption {
+      flex-direction: column;
+      gap: 16px;
     }
-    
-    .optionContainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 25px;
-        margin-left: 30px;
+  
+    .displaySort {
+      width: 90vw;
+      height: 50vh;
     }
-    
-    .buttonContainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        margin-top: 25px;
-        padding-left: 50px;   
-        width: 100vw;
+  
+    .algoName p {
+      font-size: 1.4rem;
     }
-    main{
-        height: 75vh;
-    }
-    .displaySort{
-        width: 100vw;
-        height: auto;
-    }
-    footer{
-        margin-top: -20px;
-        border-radius: solid 1px;
-        height: 30vh;
-    }
-    .algoName{
-        font-size: 25px;
-    }
-    .algoDesc{
-        width: 90vw;
-    }
-
-}
+  }
+  
